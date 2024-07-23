@@ -3,7 +3,7 @@ from tkinter import ttk
 import random
 
 SIZE = 200
-PIXEL_SIZE = 4
+PIXEL_SIZE = 3
 SELECTED_FUNCTION = 0
 array = [i for i in range(SIZE)]
 
@@ -205,7 +205,7 @@ chc = ttk.Combobox(bottom_bar, values=function_names)
 chc.grid(column=0, row=0, padx=5, pady=5)
 chc.current(0)
 
-startButton = Button(bottom_bar, command=startCommand, text="SWAP")
+startButton = Button(bottom_bar, command=startCommand, text="SORT")
 startButton.grid(column=1, row=0, padx=5, pady=5)
 
 shuffleButton = Button(bottom_bar, command=shuffleCommand, text="SHUFFLE")
