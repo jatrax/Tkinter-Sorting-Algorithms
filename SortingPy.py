@@ -2,8 +2,8 @@ from tkinter import *
 from tkinter import ttk
 import random
 
-SIZE = 100
-PIXEL_SIZE = 6
+SIZE = 150
+PIXEL_SIZE = 8
 SELECTED_FUNCTION = 0
 array = [i for i in range(SIZE)]
 
@@ -18,6 +18,7 @@ def update_UI():
 def shuffle():
     for i in range(SIZE):
         swap(i,random.randint(0,SIZE-1))
+        update_UI()
 
 def bubble_sort():
     for i in range(len(array)-1):
