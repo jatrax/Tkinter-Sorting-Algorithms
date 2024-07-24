@@ -193,7 +193,8 @@ canvas = Canvas(app,width=SIZE*PIXEL_SIZE,height=SIZE*PIXEL_SIZE,background=bg)
 canvas.pack()
 
 def startCommand():
-    SELECTED_FUNCTION = function_names.index(chc.selection_get())
+    try:SELECTED_FUNCTION = function_names.index(chc.selection_get())
+    except:SELECTED_FUNCTION = 0
     functions[SELECTED_FUNCTION]()
 
 def shuffleCommand():
@@ -215,6 +216,7 @@ bottom_bar.pack()
 color = 'white'
 def draw():
     for x in range(len(array)):
+        color = "#"+str(int(array[x]/SIZE*9))+str(int(array[x]/SIZE*9))+'77'+str(9-int(array[x]/SIZE*9))+str(9-int(array[x]/SIZE*9))
         canvas.create_oval(x*PIXEL_SIZE, SIZE*PIXEL_SIZE - array[x]*PIXEL_SIZE, x*PIXEL_SIZE + PIXEL_SIZE, SIZE*PIXEL_SIZE - array[x]*PIXEL_SIZE -PIXEL_SIZE, fill=color)
 
 shuffle()
