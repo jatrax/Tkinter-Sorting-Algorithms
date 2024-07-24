@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import random
 
-SIZE = 150
+SIZE = 120
 PIXEL_SIZE = 8
 SELECTED_FUNCTION = 0
 array = [i for i in range(SIZE)]
