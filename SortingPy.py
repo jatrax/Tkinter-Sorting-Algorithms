@@ -2,8 +2,8 @@ from tkinter import *
 from tkinter import ttk
 import random
 
-SIZE = 200
-PIXEL_SIZE = 3
+SIZE = 100
+PIXEL_SIZE = 6
 SELECTED_FUNCTION = 0
 array = [i for i in range(SIZE)]
 
@@ -47,7 +47,7 @@ def cocktail_sort():
             if array[i] > array[i + 1]:
                 swap(i, i + 1)
                 swapped = True
-        start += 1
+        start += 1    
 
 
 def selection_sort():
@@ -196,6 +196,7 @@ def startCommand():
     try:SELECTED_FUNCTION = function_names.index(chc.selection_get())
     except:SELECTED_FUNCTION = 0
     functions[SELECTED_FUNCTION]()
+    update_UI()
 
 def shuffleCommand():
     shuffle()
